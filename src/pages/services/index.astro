@@ -1,0 +1,13 @@
+---
+import Layout from '@layouts/Layout.astro';
+import InnerHero from '@components/sections/InnerHero.astro';
+
+const heroContent = {
+    title: 'Unsere Dienstleistungen',
+    description: 'Das können wir alles für Sie tun',
+};
+---
+
+<Layout title="Hygeia - Dienstleistungen" description="Unsere Dienstleistungen, für Sie">
+    <InnerHero content={heroContent} />
+</Layout>

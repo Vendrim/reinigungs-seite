@@ -1,0 +1,25 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Button from '@components/ui/Button.astro';
+
+const seoTitle = 'Diese Seite existiert nicht.';
+const seoDescription = 'Die Seite die Sie suchen, existiert leider nicht.';
+---
+
+<Layout title={seoTitle} description={seoDescription}>
+    <div class="w-full min-h-[80vh] flex items-center">
+        <div class="site-container mx-auto px-4 py-base text-center">
+            <div class="max-w-2xl mx-auto">
+                <h1 class="mb-4 text-9xl font-bold text-primary" data-aos="fade-up">404</h1>
+                <h2 class="mb-8" data-aos="fade-up" data-aos-delay="100">Seite nicht gefunden!</h2>
+                <p class="text-body-base mb-12" data-aos="fade-up" data-aos-delay="200">
+                    Die Seite, die Sie suchen, gibt es leider nicht. Prüfen Sie Ihre URL oder benutzen Sie unseren
+                    Button, um zurück zur Homepage zu gelangen.
+                </p>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <Button href="/" variant="primary" size="lg"> Zurück zur Homepage </Button>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>

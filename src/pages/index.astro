@@ -1,0 +1,118 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/sections/Hero.astro';
+import SplitPanel from '@components/sections/SplitPanel.astro';
+import Features from '@components/sections/Features.astro';
+import Stats from '@components/sections/Stats.astro';
+import { featureLists } from '@data/features';
+import { statsLists } from '@data/stats';
+import Logos from '@components/sections/Logos.astro';
+import { logoLists } from '@data/logos';
+import CtaBanner from '@components/sections/CtaBanner.astro';
+import Faqs from '@components/sections/Faqs.astro';
+import { faqLists } from '@data/faqs';
+import heroImage from '../assets/images/home/default-hero-2.jpg';
+import styleGuideImage from '../assets/images/home/developer.jpg';
+
+const seoTitle = 'Hygeia - Ihr Reinigungsdienstleister';
+const seoDescription =
+    'Wir sind Hygeia, ein Reinigungsdienstleister, der Ihre Immobilien stets pfleglich in Stand hält.';
+
+const heroContent = {
+    title: 'Ihren Schmutz vernichten wir! Beginnen Sie Ihre Reinigungsreise!',
+    description:
+        'Hygeia ist eines der wenigen Reinigungsdienste, auf die sie sich verlassen können. Unsere mehrjährige Erfahrung im Reinigungsbereich hat us mehr Fähigkeiten als jeder anderer Konkurrent vermittelt. Vereinbaren Sie ihr Reinigungstermin heute!',
+    buttons: [
+        {
+            text: 'Kontaktieren Sie uns!',
+            link: '/contact',
+            target: '_self',
+        },
+        {
+            text: 'Rufen Sie uns an: 0176994447878',
+            link: 'tel:+490176994447878',
+            target: '_blank',
+        },
+    ],
+    backgroundImage: heroImage,
+    overlayOpacity: 0.5,
+};
+
+const featuresSection = {
+    eyebrow: 'UNSERE DIENSTLEISTUNGEN',
+    title: 'HZ Glas- und Gebäude-reinigung',
+    description:
+        'Die Erstellung eines auf Ihre Bedürfnisse zugeschnittenen Service gehört ebenso zu unserem umfassenden Angebot wie die regelmäßige Inspektion Ihrer Immobilie.',
+    features: featureLists.main.features,
+    button: {
+        text: 'Zu unseren Dienstleistungen',
+        link: '/services',
+        variant: 'primary' as const,
+    },
+};
+
+const FooterCta = {
+    eyebrow: 'Starten Sie Heute!',
+    title: 'Haben wir Sie überzeugt?',
+    description:
+        'Dann buchen Sie schon ein Termin mit uns heute! Lassen Sie sich diese reine Gelegenheit nicht entgehen!',
+    hideCta: false,
+    button: {
+        text: 'Kontaktieren Sie Uns!',
+        link: '/contact',
+    },
+};
+
+const sideBySideStats = {
+    eyebrow: 'Zahlen',
+    title: 'Wir haben vielen schon geholfen!',
+    description:
+        'Mit unseren effizienten aber auch peniblen Reinigungsmitarbeiter und Werkzeuge halten wir schon mehrere Immobilien in Stand. Zahlen lügen nicht, so auch nicht unsere Ergebnisse!',
+    variant: 'side-by-side' as const,
+    stats: statsLists.withContent.stats,
+    content: {
+        title: 'Wir haben vielen schon geholfen! Kommen Sie nun dazu!',
+        description:
+            'Mit unseren effizienten aber auch peniblen Reinigungsmitarbeiter und Werkzeuge halten wir schon mehrere Immobilien in Stand. Zahlen lügen nicht, so auch nicht unsere Ergebnisse!',
+        button: {
+            text: 'Zur Terminvereinbarung',
+            link: '/contact',
+            variant: 'primary' as const,
+        },
+    },
+};
+
+const mainCta = {
+    eyebrow: 'Verlässlich rein',
+    title: 'Glänzende Sauberkeit, auf die Sie zählen können',
+    description:
+        'Unsere erfahrenen Reinigungskräfte sorgen mit modernster Ausrüstung und umweltfreundlichen Reinigungsmitteln für höchste Hygienestandards – gründlich, pünktlich und mit Liebe zum Detail. Ob Büro, Praxis oder Privathaushalt – wir bringen Frische und Ordnung in jeden Raum. Vertrauen Sie auf Qualität, Zuverlässigkeit und ein Ergebnis, das sich sehen lassen kann.',
+    button: {
+        text: 'Jetzt Termin sichern',
+        link: '/contact',
+        variant: 'primary' as const,
+        target: '_self' as const,
+    },
+};
+
+const logosSection = {
+    eyebrow: 'Unsere Kunden',
+    logos: logoLists.main.logos,
+};
+
+const faqsSection = {
+    eyebrow: 'FAQ',
+    title: 'Was uns oft gefragt wird',
+    description: 'Finden Sie die Antworten, zu den Fragen, die wir am meisten gehört haben.',
+    faqs: faqLists.main.faqs,
+};
+---
+
+<Layout footerCta={FooterCta} title={seoTitle} description={seoDescription}>
+    <Hero content={heroContent} />
+    <Features content={featuresSection} padding="base" background="light" />
+    <Stats content={sideBySideStats} background="dark" padding="base" />
+    <CtaBanner content={mainCta} variant="contained" background="light" paddingBottom="base" />
+    <Logos content={logosSection} background="base" padding="small" />
+    <Faqs content={faqsSection} background="base" padding="base" />
+</Layout>

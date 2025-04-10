@@ -1,0 +1,19 @@
+---
+import Layout from '@layouts/Layout.astro';
+import InnerHero from '@components/sections/InnerHero.astro';
+// import TeamGrid from '@components/sections/TeamGrid.astro';
+
+const seoTitle = 'Über Uns';
+const seoDescription =
+    'Unser Team besteht aus mehreren vielfältige Persönlichkeiten, die schon immer gegen die Unreinheit der Welt gekämpft haben.';
+
+const heroContent = {
+    title: 'Über Uns',
+    description: 'Hier lernen Sie unser Team kennen!',
+};
+---
+
+<Layout title={seoTitle} description={seoDescription}>
+    <InnerHero content={heroContent} />
+    <!-- <TeamGrid padding="base" /> -->
+</Layout>

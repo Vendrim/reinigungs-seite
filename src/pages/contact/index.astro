@@ -1,0 +1,15 @@
+---
+import Layout from '@layouts/Layout.astro';
+import InnerHero from '@components/sections/InnerHero.astro';
+import ContactInfo from '@components/sections/ContactInfo.astro';
+
+const heroContent = {
+    title: 'Kontakt',
+    description: 'Hier können Sie uns kontaktieren oder direkt ein Termin buchen.',
+};
+---
+
+<Layout title="Kontakt" description="Treten Sie mit uns in Kontakt!">
+    <InnerHero content={heroContent} />
+    <ContactInfo background="base" padding="base" />
+</Layout>
