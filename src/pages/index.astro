@@ -1,7 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Hero from '@components/sections/Hero.astro';
-import SplitPanel from '@components/sections/SplitPanel.astro';
 import Features from '@components/sections/Features.astro';
 import Stats from '@components/sections/Stats.astro';
 import { featureLists } from '@data/features';
@@ -12,7 +11,6 @@ import CtaBanner from '@components/sections/CtaBanner.astro';
 import Faqs from '@components/sections/Faqs.astro';
 import { faqLists } from '@data/faqs';
 import heroImage from '../assets/images/home/default-hero-2.jpg';
-import styleGuideImage from '../assets/images/home/developer.jpg';
 
 const seoTitle = 'Hygeia - Ihr Reinigungsdienstleister';
 const seoDescription =
@@ -65,15 +63,15 @@ const FooterCta = {
 
 const sideBySideStats = {
     eyebrow: 'Zahlen',
-    title: 'Wir haben vielen schon geholfen!',
+    title: 'Wir haben schon vielen geholfen!',
     description:
-        'Mit unseren effizienten aber auch peniblen Reinigungsmitarbeiter und Werkzeuge halten wir schon mehrere Immobilien in Stand. Zahlen lügen nicht, so auch nicht unsere Ergebnisse!',
+        ' Mit unseren effizienten, aber auch peniblen Regierungsmitarbeitern und -werkzeugen halten wir bereits viele Immobilien instand. Zahlen lügen nicht, also auch nicht unsere Ergebnisse!',
     variant: 'side-by-side' as const,
     stats: statsLists.withContent.stats,
     content: {
-        title: 'Wir haben vielen schon geholfen! Kommen Sie nun dazu!',
+        title: 'Wir haben schon vielen geholfen! Kommen Sie nun dazu!',
         description:
-            'Mit unseren effizienten aber auch peniblen Reinigungsmitarbeiter und Werkzeuge halten wir schon mehrere Immobilien in Stand. Zahlen lügen nicht, so auch nicht unsere Ergebnisse!',
+            ' Mit unseren effizienten, aber auch peniblen Regierungsmitarbeitern und -werkzeugen halten wir bereits viele Immobilien instand. Zahlen lügen nicht, also auch nicht unsere Ergebnisse!',
         button: {
             text: 'Zur Terminvereinbarung',
             link: '/contact',
