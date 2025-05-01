@@ -23,7 +23,7 @@ export const featureLists: Record<string, FeatureList> = {
                 icon: Smile,
                 title: 'Qualität',
                 description:
-                    'Ihr Gebäude ist schmutzig? Sie sind es leid, dass Ihre Einrichtung mit Staub bedeckt sind? Möchten Sie Ihre Wohnung oder Ihr Büro reinigen und dabei frei von Gesundheitsrisiken sein? Wir sind bestrebt, höchste Qualität zu liefern.',
+                    'Ihr Gebäude ist schmutzig? Sie sind es leid, dass Ihre Einrichtungen mit Staub bedeckt sind? Möchten Sie Ihre Wohnung oder Ihr Büro reinigen und dabei frei von Gesundheitsrisiken sein? Wir sind bestrebt, höchste Qualität zu liefern.',
             },
             {
                 icon: Shield,
